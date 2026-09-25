@@ -1,0 +1,45 @@
+BACKROW — AI-Integrated Audience-View Presentation QA
+YCWC 2026 Senior — AI for Daily Life
+Participant: Muhammad Zaky Asshidqy
+
+IDEA / PROBLEM
+Presenters normally inspect the source slide on a laptop. The audience receives a different signal after projection, viewing distance, lighting, focus, perspective, glare, and camera/display conditions. A slide can look correct at the source while a critical number or phrase becomes unreadable or changes meaning from the audience position.
+
+SOLUTION
+BACKROW is an AI-integrated website that tests the presentation through the physical audience path. The presenter loads the deck once. A phone placed at the audience position captures the real projected slide. BACKROW automatically identifies which slide is being shown, rectifies the camera perspective, maps audience evidence back to the source slide, detects exact information loss, localizes the failing region, recommends a targeted repair, and verifies the repair through rescan.
+
+HOW IT WORKS
+1. Load a PDF/slide deck on the presenter device.
+2. Pair an audience-position phone with a one-time 6-digit code.
+3. Capture the actual projected screen from the seat being tested.
+4. Match the capture to the correct source slide without being given the page number.
+5. Rectify perspective and align source/camera regions.
+6. Recover exact text/numbers with OCR and combine that evidence with AudienceNet 2.0.
+7. Apply deterministic safety rules: a verified numeric contradiction overrides model confidence.
+8. Mark localized evidence as RECOVERED, WATCH, or AT RISK.
+9. Repair the source region and rescan from the same audience position to prove whether the failure is gone.
+
+AI USAGE
+- AudienceNet 2.0: the project's custom learned model for paired source/camera visual-survival evidence.
+- Tesseract 5 LSTM: third-party pretrained OCR for exact text and number recovery.
+- ORB + RANSAC + homography: classical computer vision for slide retrieval, geometric verification, and perspective rectification.
+- Deterministic evidence fusion and numeric contradiction guards prevent learned confidence from overruling stronger direct evidence.
+
+UNIQUE FEATURES
+- Measures the real audience path instead of only checking the source file.
+- Two-device workflow: presenter laptop remains at the front while the observer phone stays at the audience position.
+- Automatic whole-deck slide identification without page-index input.
+- Localized exact-information evidence instead of a generic presentation score.
+- Judge-controllable live demo and deterministic backup case.
+- Before → fix → rescan proof loop.
+- Bilingual English/Indonesian interface.
+- Blinded timed human-study tooling is included to measure the remaining camera-versus-human gap honestly.
+
+VERIFIED ENGINEERING RESULT
+The bundled procedural AudienceNet test reports macro-F1 0.9422 versus the strongest bundled simple baseline 0.4789. Generated projection alignment passes 6/6 cases, wrong-pair rejection 2/2, whole-deck matching 3/3, and the critical bundled example detects source 2.5% versus audience recovery 25%. After the bundled repair/rescan, the risk count falls from 2 to 0. These procedural/model metrics are not claimed as human-readability accuracy.
+
+CLAIM BOUNDARY
+A camera is not a human eye. BACKROW does not invent a human-readability percentage from OCR/model confidence. The package includes a blinded, timed, locked field-study workflow so real projector/room/reader evidence can be measured separately.
+
+RUNTIME / COMPLIANCE
+The core runtime does not depend on a paid plugin or paid cloud AI API. Presenter rehearsal in the submission build uses captions and browser/OS local speech synthesis only.

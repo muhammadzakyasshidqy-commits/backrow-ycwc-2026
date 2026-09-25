@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "desktop_overflow": false,
+  "mobile_overflow": false,
+  "pageerrors": [],
+  "scenes": 7,
+  "bilingual": true,
+  "external_voice_segments": 0,
+  "local_voice_rehearsal": true,
+  "paid_plugin_dependency": false,
+  "live_product_hook": "same-origin iframe + loadJudgeDemo/runFixRescanDemo"
+}

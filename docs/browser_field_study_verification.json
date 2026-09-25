@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "participant_truth_hidden": true,
+  "admin_truth_available": true,
+  "browser_response_flow": true,
+  "pre_exposure_cue_without_live_overlay": true,
+  "reader_locked_until_exposure": true,
+  "screenshots": [
+    "BACKROW_FIELD_STUDY_ADMIN.png",
+    "BACKROW_FIELD_STUDY_READER.png"
+  ]
+}

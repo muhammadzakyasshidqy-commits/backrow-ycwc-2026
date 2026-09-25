@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "deckId_created": true,
+  "auto_match": [
+    {
+      "expected": 0,
+      "matched": 0,
+      "counts": {
+        "supported": 10,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "deck_match_ms": 801,
+      "analysis_ms": 3959,
+      "wall_ms": 4852,
+      "match_only_ms": 673
+    },
+    {
+      "expected": 1,
+      "matched": 1,
+      "counts": {
+        "supported": 6,
+        "watch": 0,
+        "at_risk": 2
+      },
+      "deck_match_ms": 648,
+      "analysis_ms": 3668,
+      "wall_ms": 4402,
+      "match_only_ms": 671
+    },
+    {
+      "expected": 2,
+      "matched": 2,
+      "counts": {
+        "supported": 4,
+        "watch": 0,
+        "at_risk": 5
+      },
+      "deck_match_ms": 929,
+      "analysis_ms": 3953,
+      "wall_ms": 4977,
+      "match_only_ms": 884
+    }
+  ]
+}

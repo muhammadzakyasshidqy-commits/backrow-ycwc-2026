@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "scope": "synthetic evaluator-logic unit test only; not a field-performance result",
+  "observations": 100,
+  "independent_slides": 10,
+  "perfect_gate_fixture_passed": true,
+  "calibration_leakage_refused": true,
+  "timed_exposure_enforced": true,
+  "claim_boundary": "This proves evaluator gate/refusal logic executes as designed. It does not claim BACKROW accuracy on humans or projectors."
+}

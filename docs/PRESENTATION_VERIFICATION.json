@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "slides": 10,
+  "english_overflow_test": "PASS \u2014 slides_test.py",
+  "indonesian_overflow_test": "PASS \u2014 slides_test.py",
+  "english_render_test": "PASS \u2014 render_slides.py",
+  "indonesian_render_test": "PASS \u2014 render_slides.py",
+  "english_montage": "preview_v11/BACKROW_V11_DECK_EN_MONTAGE.png",
+  "indonesian_montage": "preview_v11/BACKROW_V11_DECK_ID_MONTAGE.png",
+  "english_sha256": "f1e220c9d22f0fd1713ba1390ddce6c2f9eb1fbefb03412a988551dd784138bc",
+  "indonesian_sha256": "f9a9aa799e9a36cd9d5c49248672cefbaa0bc52beba571926b871da8800bfb53",
+  "claim_boundary": "Competition deck labels procedural AudienceNet metrics as non-human and includes a physical-validation boundary.",
+  "version": "11.0.0"
+}

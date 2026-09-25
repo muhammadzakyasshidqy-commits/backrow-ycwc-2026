@@ -1,0 +1,110 @@
+{
+  "benchmark_type": "procedural adversarial engineering only",
+  "room_assumption": {
+    "farthest_seat_m": 8.4,
+    "image_height_m": 1.8
+  },
+  "cases": [
+    {
+      "case": "clean",
+      "ok": true,
+      "counts": {
+        "supported": 10,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "bdm_source_only": {
+        "meets": 6,
+        "borderline": 1,
+        "below": 3
+      },
+      "at_risk_despite_bdm_meets": 0,
+      "catastrophic_ocr_risk_regions": 0,
+      "deterministic_rule_at_risk": 0,
+      "latency_s": 3.94
+    },
+    {
+      "case": "critical_numeric_loss",
+      "ok": true,
+      "counts": {
+        "supported": 6,
+        "watch": 0,
+        "at_risk": 2
+      },
+      "bdm_source_only": {
+        "meets": 2,
+        "borderline": 1,
+        "below": 5
+      },
+      "at_risk_despite_bdm_meets": 0,
+      "catastrophic_ocr_risk_regions": 1,
+      "deterministic_rule_at_risk": 2,
+      "latency_s": 3.027
+    },
+    {
+      "case": "glare_washout",
+      "ok": true,
+      "counts": {
+        "supported": 4,
+        "watch": 1,
+        "at_risk": 4
+      },
+      "bdm_source_only": {
+        "meets": 6,
+        "borderline": 0,
+        "below": 3
+      },
+      "at_risk_despite_bdm_meets": 4,
+      "catastrophic_ocr_risk_regions": 3,
+      "deterministic_rule_at_risk": 3,
+      "latency_s": 3.376
+    },
+    {
+      "case": "extra_blur",
+      "ok": true,
+      "counts": {
+        "supported": 7,
+        "watch": 1,
+        "at_risk": 2
+      },
+      "bdm_source_only": {
+        "meets": 6,
+        "borderline": 1,
+        "below": 3
+      },
+      "at_risk_despite_bdm_meets": 2,
+      "catastrophic_ocr_risk_regions": 0,
+      "deterministic_rule_at_risk": 1,
+      "latency_s": 4.17
+    },
+    {
+      "case": "low_res",
+      "ok": true,
+      "counts": {
+        "supported": 1,
+        "watch": 0,
+        "at_risk": 9
+      },
+      "bdm_source_only": {
+        "meets": 6,
+        "borderline": 1,
+        "below": 3
+      },
+      "at_risk_despite_bdm_meets": 5,
+      "catastrophic_ocr_risk_regions": 7,
+      "deterministic_rule_at_risk": 8,
+      "latency_s": 4.726
+    }
+  ],
+  "verified_properties": {
+    "clean_control_no_false_risk": true,
+    "critical_number_loss_detected": true,
+    "camera_adds_room_evidence_beyond_source_geometry": true,
+    "severe_degradation_not_silently_green": true
+  },
+  "not_claimed": [
+    "human readability accuracy",
+    "real-projector prevalence",
+    "generic frontier-AI superiority"
+  ]
+}

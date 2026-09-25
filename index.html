@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#f3f3ef" />
+<title>BACKROW — Test the slide from the back row</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <button class="brand" id="brandBtn" aria-label="Back to start"><span class="brandMark">BR</span><span>BACKROW</span></button>
+  <nav class="topActions">
+    <span class="localTag engineState" id="engineState" data-i18n="engineCheck">ENGINE CHECK</span>
+    <button class="ghost small" id="langBtn" aria-label="Switch language">ID</button>
+  </nav>
+</header>
+
+<main>
+<section id="landing" class="landing">
+  <div class="heroCopy">
+    <div class="heroIndex"><span>01</span><span>/</span><span>FIELD TEST</span></div>
+    <p class="eyebrow" data-i18n="eyebrow">AUDIENCE-VIEW PRESENTATION PREFLIGHT</p>
+    <h1 data-i18n="hero">Can the last row still read it?</h1>
+    <p class="heroText" data-i18n="heroText">BACKROW pairs the presenter deck with a phone at the audience position, then shows exactly which text or numbers failed to survive the room.</p>
+    <div class="heroActions">
+      <button class="primary" id="startBtn" data-i18n="start">Check a real slide</button>
+      <button class="secondary" id="demoBtn" data-i18n="demo">Run judge demo</button>
+    </div>
+    <div class="heroMeta">
+      <span data-i18n="privacy">No account. Images go only to the BACKROW instance you opened; no third-party AI service.</span>
+      <span data-i18n="modelTag">CUSTOM MODEL · AudienceNet + bundled OCR · no third-party AI API</span>
+    </div>
+    <div class="heroRail" aria-label="How BACKROW works">
+      <div><b>01</b><span data-i18n="railDeck">UPLOAD DECK</span></div>
+      <div><b>02</b><span data-i18n="railSeat">PAIR BACK-ROW PHONE</span></div>
+      <div><b>03</b><span data-i18n="railProof">PROVE WHAT SURVIVED</span></div>
+    </div>
+  </div>
+
+  <div class="heroProof" aria-label="Real BACKROW evidence example">
+    <div class="proofHeader">
+      <span>BACKROW / CASE BR-02</span>
+      <span data-i18n="proofLabel">AUDIENCE VIEW · 8.4 m</span>
+    </div>
+    <div class="proofContext">
+      <img src="assets/slide_2_view_risk.png" alt="Full camera capture from the back row" />
+      <span data-i18n="contextLabel">RAW AUDIENCE CAPTURE / 8.4 m</span>
+    </div>
+    <div class="proofPair">
+      <figure class="proofFrame proofSource">
+        <figcaption><span data-i18n="sourceSignal">SOURCE</span><b>2.5%</b></figcaption>
+        <img src="assets/hero_source_detail.png" alt="Original source slide" />
+      </figure>
+      <figure class="proofFrame proofAudience">
+        <figcaption><span data-i18n="audienceSignal">BACK ROW</span><b>25%</b></figcaption>
+        <img src="assets/hero_audience_detail.png" alt="Camera view from the audience" />
+      </figure>
+    </div>
+    <div class="proofReadout">
+      <span class="proofStatus" data-i18n="risk">AT RISK</span>
+      <div class="proofFinding"><strong>2.5% → 25%</strong><small data-i18n="exampleNote">The critical number changed in the audience capture.</small></div>
+      <div class="proofEngine"><span>AUDIENCENET + OCR</span><small data-i18n="evidence">Camera decode:</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="workspace" class="workspace hidden" aria-live="polite">
+  <div class="workspaceHead">
+    <div><p class="eyebrow" data-i18n="workspaceEyebrow">SOURCE → ROOM → EVIDENCE</p><h2 data-i18n="workspaceTitle">Test what the audience actually receives.</h2></div>
+    <button class="secondary compact" id="judgeDemoBtn" data-i18n="judgeDemo">Load judge demo</button>
+  </div>
+
+  <div class="steps">
+    <section class="stepCard" id="sourceCard">
+      <div class="stepNum">01</div>
+      <div class="stepBody">
+        <h3 data-i18n="sourceTitle">Original slide</h3>
+        <p data-i18n="sourceHelp">Upload a slide image or a PDF deck. The source is treated as the intended content.</p>
+        <label class="fileButton"><input id="sourceInput" type="file" accept="image/*,application/pdf"/><span data-i18n="chooseSource">Choose slide / PDF</span></label>
+        <div id="deckStrip" class="deckStrip hidden"></div>
+        <div id="sourceReady" class="ready hidden"><span>✓</span><span id="sourceName">slide.png</span></div>
+      </div>
+    </section>
+
+    <section class="stepCard" id="viewCard">
+      <div class="stepNum">02</div>
+      <div class="stepBody">
+        <h3 data-i18n="viewTitle">Audience view</h3>
+        <p data-i18n="viewHelp">Stand at the seat you want to protect. Use the camera or upload a photo from that position.</p>
+        <div class="captureActions">
+          <button class="secondary" id="cameraBtn" data-i18n="camera">Use camera</button>
+          <button class="secondary hidden" id="autoAuditBtn" data-i18n="autoAudit">Auto-audit the whole deck</button>
+          <label class="fileButton subtle"><input id="viewInput" type="file" accept="image/*"/><span data-i18n="uploadView">Upload audience photo</span></label>
+        </div>
+        <div id="viewReady" class="ready hidden"><span>✓</span><span id="viewName">audience-view.jpg</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="roomCard" id="roomCard">
+    <div class="roomCardHead"><div><h3 data-i18n="roomTitle">Physical room baseline</h3><p data-i18n="roomHelp">Optional. Add the farthest-seat distance and projected image height. BACKROW will compare source geometry against a transparent AVIXA BDM baseline, then separately test the real camera view.</p></div><span class="localTag" data-i18n="notAiBaseline">NON-AI BASELINE</span></div>
+    <div class="roomInputs">
+      <label class="fieldLabel"><span data-i18n="distanceLabel">Farthest viewer distance (m)</span><input id="distanceInput" type="number" min="0.3" max="100" step="0.1" placeholder="e.g. 8.4"></label>
+      <label class="fieldLabel"><span data-i18n="heightLabel">Projected image height (m)</span><input id="imageHeightInput" type="number" min="0.1" max="20" step="0.1" placeholder="e.g. 1.8"></label>
+    </div>
+    <div id="roomNote" class="ready hidden"><span>i</span><span data-i18n="demoRoomNote">Demo room values are assumptions for the judge demo, not measurements of a YCWC venue.</span></div>
+  </section>
+
+  <section id="cameraPanel" class="cameraPanel hidden">
+    <video id="cameraVideo" autoplay playsinline muted></video>
+    <div class="cameraHud"><span id="cameraHintText" data-i18n="cameraHint">Keep the full projected screen inside frame</span><button class="primary compact" id="captureBtn" data-i18n="capture">Capture this seat</button><button class="primary compact hidden" id="scanStartBtn" data-i18n="startScan">Start deck scan</button><button class="secondary compact hidden" id="scanStopBtn" data-i18n="stopScan">Stop & review</button><button class="ghost compact" id="closeCameraBtn" data-i18n="cancel">Cancel</button></div>
+    <canvas id="cameraCanvas" class="hidden"></canvas>
+  </section>
+
+
+  <section id="scanPanel" class="scanPanel hidden" aria-live="polite">
+    <div class="scanTop">
+      <div><p class="eyebrow" data-i18n="scanEyebrow">AUTOMATIC DECK AUDIT</p><h3 data-i18n="scanTitle">Leave the camera in the back row. Advance your slides normally.</h3><p data-i18n="scanHelp">BACKROW recognizes which deck page is on the projector, analyzes it once, and builds a deck-wide evidence report.</p></div>
+      <div class="scanCounter"><strong id="scanObserved">0</strong><span id="scanTotal">/ 0</span><small data-i18n="slidesObserved">slides observed</small></div>
+    </div>
+    <div id="scanStatus" class="scanStatus" data-i18n="scanIdle">Ready to watch for projected slides.</div>
+    <div class="remoteObserverBar">
+      <div><b data-i18n="remoteTitle">Use a phone at the back row</b><span data-i18n="remoteHelp">Pair a second device so the presenter laptop can stay at the front.</span></div>
+      <button class="secondary compact" id="remoteObserverBtn" data-i18n="remoteStart">Create observer link</button>
+    </div>
+    <div id="remoteObserverPanel" class="remoteObserverPanel hidden">
+      <div class="remoteObserverMeta"><span data-i18n="remoteCode">OBSERVER LINK</span><strong id="remoteObserverUrl">—</strong></div>
+      <div class="remoteObserverActions"><button class="secondary compact" id="remoteCopyBtn" data-i18n="remoteCopy">Copy link</button><button class="ghost compact" id="remoteOpenBtn" data-i18n="remoteOpen">Open locally</button></div>
+      <div id="remoteObserverStatus" class="remoteObserverStatus" data-i18n="remoteWaiting">Waiting for a capture from the audience device.</div>
+    </div>
+    <div id="scanGrid" class="scanGrid"></div>
+    <div class="scanActions"><button class="secondary" id="scanDemoBtn" data-i18n="scanDemo">Run 3-slide auto-scan demo</button><div class="scanActionRight"><button class="secondary hidden" id="exportReportBtn" data-i18n="exportReport">Export evidence report</button><button class="primary hidden" id="reviewWorstBtn" data-i18n="reviewWorst">Review highest-risk slide</button></div></div>
+  </section>
+
+  <div class="runRow">
+    <div class="runNote" data-i18n="runNote">BACKROW does not invent a “readability score.” It shows recoverable evidence per source region.</div>
+    <button class="primary runButton" id="analyzeBtn" disabled data-i18n="analyze">Analyze audience view</button>
+  </div>
+
+  <section id="loadingPanel" class="loadingPanel hidden">
+    <div class="spinner" aria-hidden="true"></div>
+    <div><strong id="loadingTitle" data-i18n="loadingTitle">Aligning the camera to the source…</strong><p id="loadingText" data-i18n="loadingText">Then the local OCR engine decodes the same regions the audience camera captured.</p></div>
+  </section>
+
+  <section id="errorPanel" class="errorPanel hidden"><div><b data-i18n="cannotUse">Not enough evidence.</b><p id="errorText"></p></div><button class="ghost compact" id="dismissError" data-i18n="dismiss">Dismiss</button></section>
+
+  <section id="results" class="results hidden">
+    <div class="resultTop">
+      <div><p class="eyebrow" data-i18n="resultEyebrow">AUDIENCE EVIDENCE</p><h2 id="resultHeadline">2 regions need attention.</h2><p id="resultSub" class="resultSub"></p></div>
+      <div class="counts" id="counts"></div>
+    </div>
+    <div class="visualGrid">
+      <figure class="imagePanel"><figcaption><b data-i18n="sourceEvidence">Source with localized evidence</b><span data-i18n="boxes">Boxes are mapped to source coordinates</span></figcaption><img id="overlayImg" alt="Source slide with evidence boxes"/></figure>
+      <figure class="imagePanel"><figcaption><b data-i18n="rectified">Audience capture, rectified</b><span data-i18n="rectifiedHelp">Perspective corrected before comparison</span></figcaption><img id="rectifiedImg" alt="Rectified audience capture"/></figure>
+    </div>
+    <div class="ledgerHead"><h3 data-i18n="ledger">Evidence ledger</h3><div class="legend"><span class="dot risk"></span><span data-i18n="riskL">At risk</span><span class="dot watch"></span><span data-i18n="watchL">Watch</span><span class="dot good"></span><span data-i18n="goodL">Recovered</span></div></div>
+    <div id="baselineBar" class="baselineBar hidden"></div>
+    <div id="ledgerList" class="ledgerList"></div>
+    <section id="fixPanel" class="fixPanel hidden">
+      <div class="fixHead"><div><h3 data-i18n="fixTitle">Fix the evidence, then prove it.</h3><p data-i18n="fixHelp">Recommendations are tied to observed failure modes. Rescan from the same seat after editing the slide.</p></div><div class="fixActionBtns"><button class="secondary compact hidden" id="fixDemoBtn" data-i18n="fixDemo">Run fix → rescan proof</button><button class="primary compact" id="rescanBtn" data-i18n="rescan">Set as BEFORE & rescan</button></div></div>
+      <div id="fixList" class="fixList"></div>
+      <div id="beforeAfter" class="beforeAfter hidden"></div>
+      <div class="studyActions"><button class="secondary" id="createStudyBtn" data-i18n="createStudy">Create locked human field study</button><span id="studyStatus" class="runNote"></span></div>
+    </section>
+    <details class="devDetails"><summary data-i18n="technical">Technical evidence</summary><pre id="devJson"></pre></details>
+  </section>
+</section>
+</main>
+
+<footer><span>BACKROW / YCWC 2026</span><span data-i18n="footer">Camera recoverability is evidence, not a medical eyesight claim.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>

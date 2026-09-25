@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "engine_ready": true,
+  "desktop_horizontal_overflow": false,
+  "mobile_horizontal_overflow": false,
+  "judge_counts": "2\nAT RISK\n0\nWATCH\n6\nRECOVERED",
+  "fix_rescan_delta": "BEFORE 2 risk / 0 watch \u2192 AFTER 0 risk / 0 watch\nEvidence improved from the same workflow.",
+  "pageerrors": [],
+  "screenshots": [
+    "BACKROW_V11_LANDING.png",
+    "BACKROW_V11_RESULTS.png",
+    "BACKROW_V11_FIXED_RESCAN.png",
+    "BACKROW_V11_MOBILE.png"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-09-25T18:38:36+07:00",
+  "version": "11.0.0",
+  "all_internal_checks_pass": true,
+  "checks": {
+    "syntax": true,
+    "audiencenet_training": true,
+    "audiencenet_runtime": true,
+    "engineering_projection": true,
+    "avixa_source_baseline": true,
+    "adversarial_projection": true,
+    "learned_ablation": true,
+    "fix_rescan": true,
+    "http_security": true,
+    "deck_auto_match": true,
+    "field_study_protocol_security": true,
+    "locked_evaluator_logic": true,
+    "browser_field_study": true,
+    "browser_main": true,
+    "browser_indonesian": true,
+    "browser_validation": true,
+    "remote_observer_api": true,
+    "remote_observer_browser": true,
+    "ui_design": true,
+    "release_data_clean": true,
+    "stale_model_absent": true,
+    "claim_lint": true,
+    "presentation_artifact": true,
+    "presenter_mode": true,
+    "observer_stable_scan": true,
+    "ocr_timeout_hardening": true
+  },
+  "measured": {
+    "audiencenet_scope": "physics-aware procedural projection/camera survivability pretraining",
+    "audiencenet_samples": 1440,
+    "audiencenet_test_macro_f1": 0.9422108682070732,
+    "signal_baseline_macro_f1": 0.4055530301390422,
+    "geometry_baseline_macro_f1": 0.4789111639325316,
+    "human_readability_claim": false,
+    "engineering_alignment": "6/6",
+    "wrong_pair_rejected": 2,
+    "engineering_median_analysis_s": 3.45,
+    "judge_counts": {
+      "supported": 6,
+      "watch": 0,
+      "at_risk": 2
+    },
+    "fix_rescan_before": {
+      "supported": 6,
+      "watch": 0,
+      "at_risk": 2
+    },
+    "fix_rescan_after": {
+      "supported": 8,
+      "watch": 0,
+      "at_risk": 0
+    },
+    "deck_matches_zero_based": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "deck_match_only_ms": [
+      673,
+      671,
+      884
+    ],
+    "field_study_protocol": {
+      "truth_blinded": true,
+      "frozen_randomized_order": true,
+      "timed_exposure": true,
+      "presenter_events_logged": true,
+      "immutable_submission": true
+    },
+    "browser_main_screenshots": [
+      "BACKROW_V11_LANDING.png",
+      "BACKROW_V11_RESULTS.png",
+      "BACKROW_V11_FIXED_RESCAN.png",
+      "BACKROW_V11_MOBILE.png"
+    ],
+    "browser_indonesian_screenshots": [
+      "BACKROW_V11_ID_RESULTS.png",
+      "BACKROW_V11_ID_VALIDATION.png",
+      "BACKROW_V11_ID_READER.png",
+      "BACKROW_V11_ID_ADMIN.png"
+    ],
+    "validation_screenshots": [
+      "BACKROW_FIELD_VALIDATION.png",
+      "BACKROW_FIELD_VALIDATION_MOBILE.png"
+    ],
+    "observer_screenshots": [
+      "BACKROW_V11_OBSERVER_PAIR.png",
+      "BACKROW_V11_OBSERVER_CAPTURE.png"
+    ],
+    "presenter_scenes": 7
+  },
+  "claim_boundary": "BACKROW 11.0 is verified as a working AI-integrated audience-camera recoverability system with custom AudienceNet 2.0 procedural learned evidence, exact OCR/numeric evidence, page-index-free deck retrieval, physical-view rectification, conservative evidence fusion, remote audience-device pairing, repair/rescan, and blinded timed field-validation tooling. Procedural/model metrics are not human-readability accuracy.",
+  "unresolved_external_empirical_gate": {
+    "real_projector_naive_human_locked_field_test_complete": false,
+    "manual_workflow_baseline_complete": false,
+    "real_stable_frame_deck_match_target_complete": false,
+    "locked_frontier_vlm_baseline_complete": false,
+    "reason": "These require a real projector/display, multiple physical rooms/positions, na\u00efve readers, and external frontier-model runs on the frozen physical evidence. They are intentionally not fabricated.",
+    "collector": "study.html + study_admin.html + /api/study/*",
+    "validation_console": "validate.html",
+    "protocol": "docs/FIELD_TEST_PROTOCOL.md",
+    "locked_evaluator": "training/evaluate_locked_field_studies.py"
+  },
+  "critical_sha256": {
+    "index.html": "f683884ba8a18bc817b0d8a47c6e6b0cc6c058bd51d3d85a203ca417b5944e06",
+    "styles.css": "e2e7c29f7e3e156f40648d1f13304fb91972b72a2ca393526c70380a2c48d56f",
+    "app.js": "28839d6ae60f6377c37ace26c64319230bdc53ef7348c009a64e79b459046efa",
+    "locale.js": "f7314eeed47d0c871b29375c06da0bcce50681b3e3af22e3b4ab33f52abdd9f6",
+    "observer.html": "088bb761ee75ddc975b8abad9c8ac8d17ba9ba6e8c4c3fe90fe577d39ac1bd8f",
+    "observer.js": "9111604af61f11d94325ecf08bc2de52458cc8a9806128fdf4bdf7a27e931b0b",
+    "present.html": "e7ee5c098dfc732da7fae3c3f32423fbc9c5acff81e368af54a60ebcfbb0a889",
+    "present.js": "4f92ed8d4b855e776e6df432255dd64fcd2fec4dd84a8cc0f3b59843ae7b44cd",
+    "present.css": "45cf40b7076f0d8d7cb61cf1fd9a505675df87a6b0314c2c9ba97569246ea5df",
+    "validate.html": "ab305bc7eb07609677ff147915a5f3e95f1ee228b9c639dde600aaca71fd8737",
+    "validate.js": "73bf5b937be8f60c5a87dd37a36162b8e2e835ba7e009725f1ae490e01e65818",
+    "study.html": "02e63f30a16cc16324453bafe8c62250cf5686dd7f0163b70a45b0292edd87ab",
+    "study.js": "87b0d4799a74ef21f95376006981839f170767578f90d2a23bb584101acc859e",
+    "study_admin.html": "89b723c0c9783831270b0415119c66d973a96424255c80abe6cb73ae4911606f",
+    "study_admin.js": "baff64e16ba04ac73fe826a3a05e897294a7b692333b94ce029feda1cd10214b",
+    "server.py": "73f243c388abab8e132320b64c09f7bfafcca25cdaf44066ceff3a75d6f62755",
+    "vision_engine.py": "2a1967a2f936a182dffda482e5be045217b1403d8dace04024222580c036e526",
+    "audiencenet.py": "66a436e1a9583e9143127ee646b4fb5de5425251354faac2177bbda15afc11b1",
+    "physical_baseline.py": "0dac4bb0f264b08010153de8c5a7ea85acfd8ba35f6fc976eb54d2749a76b7a1",
+    "field_calibrator.py": "f6d46f0026291a5cefbb7ae5ae5f73e1194b69f0c76c2bd0ac27d29797ca2b0c",
+    "README.md": "e25f6c3ae76c0ad3c1ab688284cb82e280027ac48f6f20c6eadf424612ab89e0",
+    "requirements.txt": "7578ac1c9761342a8f8396d675588edab0432e5bff0ff332c55900bc0afdb853",
+    "requirements-dev.txt": "02b35382a56e580898295d5a4e533f1b6f2cb3024aee57ce3c9bc1b581b9f8eb",
+    "SETUP_WINDOWS.bat": "b7a822d0fc05873510d30b2b45f20b21eb00e8af2f2615206636a14327e7ea90",
+    "RUN_WINDOWS.bat": "36968c196c9066f5478230579ef36a6e65284960d471a4b955547927d0f7be88",
+    "RUN_FIELD_STUDY_WINDOWS.bat": "d611ad7ef3ab5be45557d8c0bc42c4c156d72e99f87e8a324e3165a8189dcc36",
+    "RUN_FIELD_STUDY_LINUX_MAC.sh": "531be21aee787d48d25a51a40773c97dff9e6c792aa6689b066aad6fa266115c",
+    "VERSION.txt": "7bd6bcbe3813e0cd55e0998053d182b7bc8c97dcfd0b85028e9f7f55af4ad61b",
+    "Dockerfile": "51c3ada3cb58bbff96d34aae2c560980840ae9bcfb73ca8dc98409402f31d130",
+    ".dockerignore": "961973f2f515a7db39a86c4c68babc0999a6fe6b02583f11bd088ef47ed3cf8f",
+    "models/audiencenet_v2.json": "48f45e228f8538f0fa8a036de12f127094a9689853cccc98feebbf992a29c1a7",
+    "training/train_audiencenet.py": "8378fc4620e57c7ee8fe5ad0c4f3def5dbfbdcfca58a45536b33c4e6ab78b5ef",
+    "training/train_field_calibrator.py": "4b5f812692bc1f635d297bf38166efdbf05939400dcff5b5a96b7387fd1bf10c",
+    "training/evaluate_locked_field_studies.py": "42eed30c60b2ec816e8687f3a144f1a6aae4050bf497f230586e944ca96eeca0",
+    "assets/demo_deck.pdf": "a7e88e1cab301ddfa77e495db86aa0795ebe5251179e47d39f647468d806d783",
+    "assets/hero_source_detail.png": "c4b44f35ba4f485e75c77fccf949779396855eee869f458aea78c5126ff2d707",
+    "assets/hero_audience_detail.png": "b2d2cae673722990a7639e07211ac97a9f7abf0d0c96cec23d0296517e7866e2",
+    "docs/MODEL_CARD.md": "68623d47d4fdf7a9016f146b3e4f3233fdfb7f5a9d6940a03d09532d561a0169",
+    "docs/DATASET_CARD.md": "57068830301af171793a10de74f264001e8656bb481692022aa480e3d09b8555",
+    "docs/BENCHMARK_REPORT.md": "f4591410b4b741de66a0f1888197e7111f5c5b7cd52d0f3a03f195760cee31d0",
+    "docs/FIELD_TEST_PROTOCOL.md": "4b54d1926e8a09816f8204718554eb9535c2423084ccfa9dfbcfb82ec015c43d",
+    "docs/FIELD_STUDY_QUICKSTART.md": "edccff638d8876d378e75b77838a5bfc0f83b8d2d802eb90c6b526654dd36681",
+    "docs/FIELD_VALIDATION_QUICKSTART.md": "8935546284a32883e161bb96d222df22dbef25f706a95e7fc3596a825dd74dd7",
+    "docs/FRONTIER_AI_BASELINE_PROTOCOL.md": "2224cd35bb001c39cc1cc3a7d1bc5d43db3f1692bf22526510adfe102e2df646",
+    "docs/BASELINE_SUPREMACY.md": "87ecb3990179684466a33e92c61796b7638c8e307614883153d02aa4133ee003",
+    "docs/COMPETITOR_BASELINES.md": "a85136c6f9c24e399915f58b9485436edaa65e2ebed69ce345bd6637809217b9",
+    "docs/Q_AND_A_DEFENSE.md": "458de59acc208fbc05692824bbdba515e9fd284be257a91f59126735dfaeea6c",
+    "docs/FINAL_SCORECARD.md": "7e47df21ddc82fe74d7e753ff9ab578a6f4c92adb8bb99ced109c91f6848e5c7",
+    "docs/SOURCES_2026_09_10.md": "f563fed0b7e7f6f063bdcc55b71e4d1e504e21c9d626fc0fcea7e051be604330",
+    "docs/LICENSES.md": "90233bcf12a18d8daffde82cc2a402420a851cccb371af981459f65a89aa0d5f",
+    "docs/DEPLOYMENT.md": "e15d4dc758bc50b547a6e32eb462b22d760bf74fc768bc80c1277dc1e6a35927",
+    "docs/ARCHITECTURE_ONE_PAGE.md": "c8af494c80fd49edffa1e5de3b56ca1bdad679554c251906aad23e2a98aec0c8",
+    "docs/EXPERIMENT_ONE_PAGE.md": "f1413862ed5f02fba6c25f4fa72fc295d75c75d17c4df553bdd7db843d7c80bf",
+    "docs/DEMO_SCRIPT.md": "5e099f07297ccc593f0d5c90ea23a936790af487f5ad2e2a6b9296af9f314cc7",
+    "docs/PRESENTATION_SCRIPT.md": "2523775cba17503b0f886c8776840c039a0b72ed8d5bb1c62de15cfd17805497",
+    "docs/PRESENTATION_SCRIPT_ID.md": "15e7dbace41a47811326a37c09d83446b11a2ef1f561ea5184c448cdafd114de",
+    "docs/V11_DELTA.md": "9e43002c6631e21884ac3c2ff0f689b7bec42e60def5b2cd072cce28c1829771",
+    "docs/RULE_ALIGNMENT_2026.md": "052958e9cb76ba82e14d8010c24ffa672215b8d1553a1b172fe6f8213654c268",
+    "docs/LIVE_PRESENTATION_CUE_SHEET.md": "d7766ae00cf1eb1db0add0e3480dabc827226273394348d36b4878a36b796529",
+    "docs/Q_AND_A_DEFENSE_ID.md": "f61ac7ad5ce4a758b095a62a39c6b66de85b0cdbd66248d2ff36ca2d1e0f53c8",
+    "docs/FIELD_VALIDATION_QUICKSTART_ID.md": "58ce2edd2ecb29da3ee6030d0dcb8a91dc7e09cf9ceacbda44b4b03beec084c8",
+    "docs/SUBMISSION_CHECKLIST.md": "cea5953e4d305d2cb06b927b9df6d5483b59dc59fed24ab74bf6544b4caef216",
+    "docs/SUBMISSION_CHECKLIST_ID.md": "8ab432606ee1b7893c55462a75eada16f219da25f32b006b38a11f30081bed1b",
+    "docs/PRESENTATION_DEMO.md": "fa383be16127b7400a4476ccd98e5b024e8b95b56bbe311dd8af870b76fc6fad",
+    "docs/CONTROLLED_CLOSURE_MATRIX.md": "b73cd5bae4a2cf737dd85dad385351db0abe5c9fbef92f382a4bc1a3bef661f9",
+    "BACKROW_YCWC_2026_PRESENTATION.pptx": "f1e220c9d22f0fd1713ba1390ddce6c2f9eb1fbefb03412a988551dd784138bc",
+    "BACKROW_YCWC_2026_PRESENTATION_ID.pptx": "f9a9aa799e9a36cd9d5c49248672cefbaa0bc52beba571926b871da8800bfb53",
+    "build_presentation.js": "70b0577fd8c76ab366bd0a961cd7dd5c190b531927ca3557827a04ebb457ce04",
+    "docs/PRESENTATION_VERIFICATION.json": "70314d08abf175d7ff0767f614ac837ff684e695e81e78d61419bf792e4b3ff2"
+  }
+}

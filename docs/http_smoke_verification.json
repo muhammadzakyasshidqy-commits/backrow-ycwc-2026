@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "index": 200,
+  "engine": "tesseract 5.5.0",
+  "audiencenet": "AudienceNet-2.0.0",
+  "field_calibrator_available": false,
+  "invalid_input_rejected": true,
+  "path_traversal_rejected": true,
+  "csp": true
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "backrow-workflow-timing-v1",
+  "slides": 15,
+  "manual_seconds": 0,
+  "backrow_seconds": 0,
+  "manual_critical_recall": 0.0,
+  "backrow_critical_recall": 0.0,
+  "notes": "Replace zeros with measured values from the frozen real-world workflow comparison. Do not estimate."
+}

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "session_pairing": true,
+  "six_digit_join": true,
+  "pairing_code_single_use": true,
+  "public_secret_leak": false,
+  "admin_status_protected": true,
+  "remote_slide_match": 2,
+  "remote_counts": {
+    "supported": 6,
+    "watch": 0,
+    "at_risk": 2
+  }
+}

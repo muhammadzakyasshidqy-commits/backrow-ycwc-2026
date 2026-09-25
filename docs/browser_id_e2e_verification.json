@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "pageerrors": [],
+  "indonesian_main": true,
+  "indonesian_validation": true,
+  "indonesian_reader_truth_hidden": true,
+  "indonesian_admin": true,
+  "screenshots": [
+    "BACKROW_V11_ID_RESULTS.png",
+    "BACKROW_V11_ID_VALIDATION.png",
+    "BACKROW_V11_ID_READER.png",
+    "BACKROW_V11_ID_ADMIN.png"
+  ]
+}

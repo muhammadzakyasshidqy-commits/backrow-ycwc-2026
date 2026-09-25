@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "bdm_table_boundaries": 11,
+  "judge_critical_status": "at_risk",
+  "judge_critical_bdm": {
+    "available": true,
+    "standard_baseline": "AVIXA BDM public display-size geometry table",
+    "scope": "source geometry only; not AI; not human ground truth",
+    "actual_element_height_pct": 2.222,
+    "farthest_seat_m": 8.4,
+    "image_height_m": 1.8,
+    "viewing_ratio": 4.667,
+    "minimum_element_height_pct": 2.5,
+    "margin_pct_points": -0.278,
+    "ratio_to_minimum": 0.889,
+    "status": "below",
+    "recommended_scale_factor": 1.29
+  },
+  "room_degradation_despite_source_geometry_meeting_bdm": 4,
+  "examples": [
+    {
+      "source_text": "LAPTOP ROOM",
+      "camera_text": "LAPTOP",
+      "bdm": "meets"
+    },
+    {
+      "source_text": "High local contrast Ambient light",
+      "camera_text": "",
+      "bdm": "meets"
+    },
+    {
+      "source_text": "Sharp edges Projector washout",
+      "camera_text": "p",
+      "bdm": "meets"
+    }
+  ],
+  "claim_boundary": "This validates our implementation of the public source-geometry baseline and its separation from camera evidence; it is not a human-readability benchmark."
+}

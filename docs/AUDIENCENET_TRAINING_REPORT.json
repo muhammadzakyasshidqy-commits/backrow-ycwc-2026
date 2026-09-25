@@ -1,0 +1,81 @@
+{
+  "version": "AudienceNet-2.0.0",
+  "seed": 20260910,
+  "samples": 1440,
+  "train": 870,
+  "validation": 240,
+  "test": 330,
+  "split": "group-disjoint by text-template family",
+  "training_scope": "physics-aware procedural projection/camera survivability pretraining",
+  "human_readability_claim": false,
+  "class_counts": {
+    "at_risk": 480,
+    "supported": 480,
+    "watch": 480
+  },
+  "room_metadata_available_fraction": 0.8319444444444445,
+  "temperature": 0.92,
+  "iterations": 68,
+  "test_accuracy": 0.9424242424242424,
+  "test_macro_f1": 0.9422108682070732,
+  "signal_baseline_accuracy": 0.4575757575757576,
+  "signal_baseline_macro_f1": 0.4055530301390422,
+  "geometry_baseline_accuracy": 0.48787878787878786,
+  "geometry_baseline_macro_f1": 0.4789111639325316,
+  "classes": [
+    "at_risk",
+    "supported",
+    "watch"
+  ],
+  "confusion_matrix": [
+    [
+      107,
+      0,
+      3
+    ],
+    [
+      0,
+      105,
+      5
+    ],
+    [
+      5,
+      6,
+      99
+    ]
+  ],
+  "classification_report": {
+    "at_risk": {
+      "precision": 0.9553571428571429,
+      "recall": 0.9727272727272728,
+      "f1-score": 0.963963963963964,
+      "support": 110.0
+    },
+    "supported": {
+      "precision": 0.9459459459459459,
+      "recall": 0.9545454545454546,
+      "f1-score": 0.9502262443438914,
+      "support": 110.0
+    },
+    "watch": {
+      "precision": 0.9252336448598131,
+      "recall": 0.9,
+      "f1-score": 0.9124423963133641,
+      "support": 110.0
+    },
+    "accuracy": 0.9424242424242424,
+    "macro avg": {
+      "precision": 0.9421789112209673,
+      "recall": 0.9424242424242424,
+      "f1-score": 0.9422108682070732,
+      "support": 330.0
+    },
+    "weighted avg": {
+      "precision": 0.9421789112209674,
+      "recall": 0.9424242424242424,
+      "f1-score": 0.9422108682070731,
+      "support": 330.0
+    }
+  },
+  "claim_boundary": "Procedural curriculum only. These metrics do not establish human readability or real-room generalization."
+}

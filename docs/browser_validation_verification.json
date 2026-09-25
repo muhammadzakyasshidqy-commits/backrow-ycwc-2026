@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "pageerrors": [],
+  "desktop_horizontal_overflow": false,
+  "mobile_horizontal_overflow": false,
+  "screenshots": [
+    "BACKROW_FIELD_VALIDATION.png",
+    "BACKROW_FIELD_VALIDATION_MOBILE.png"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "model": "AudienceNet-2.0.0",
+  "procedural_macro_f1": 0.9422108682070732,
+  "baseline_macro_f1": 0.4789111639325316,
+  "judge_counts": {
+    "supported": 6,
+    "watch": 0,
+    "at_risk": 2
+  }
+}

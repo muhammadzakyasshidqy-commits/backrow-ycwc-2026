@@ -1,0 +1,5 @@
+BACKROW 11.0.0
+Authoritative base: BACKROW_YCWC_2026_V8_FINAL.zip, clean-extracted and then advanced through the V9/V10 presentation work into a full-source V11 release.
+V11 reconciles the complete source tree with the seven-scene presenter, stable-frame remote observer, same-origin presenter framing, fail-closed OCR timeout hardening, current 2026 rule-alignment notes, bilingual competition decks, and a compliance-safe local-only rehearsal voice path.
+No human-readability or real-projector field result is fabricated; the physical empirical gate remains explicitly open until real readers and projection data are collected.
+Build date: 2026-09-24

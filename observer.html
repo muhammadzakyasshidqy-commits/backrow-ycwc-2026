@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>BACKROW · Audience Observer</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+body.observerBody{min-height:100vh;background:#f4f2ec;color:#151515}.observerShell{max-width:760px;margin:0 auto;padding:24px 18px 60px}.observerHead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid #bebbb2}.observerBrand{font:800 22px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:-.04em}.observerKicker{font:700 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#666}.observerTitle{font-size:clamp(34px,8vw,58px);line-height:.96;letter-spacing:-.055em;margin:28px 0 14px;max-width:650px}.observerText{font-size:16px;line-height:1.55;max-width:620px;color:#4b4a46}.observerPanel{margin-top:28px;border-top:2px solid #171717;border-bottom:1px solid #171717;padding:16px 0 20px}.observerViewport{position:relative;width:100%;aspect-ratio:4/3;background:#111;overflow:hidden}.observerVideo{width:100%;height:100%;background:#111;object-fit:cover;display:block}.frameGuide{position:absolute;inset:7%;border:1px dashed rgba(255,255,255,.78);box-shadow:0 0 0 999px rgba(0,0,0,.08);pointer-events:none}.frameGuide span{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.72);color:#fff;padding:5px 7px;font:800 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}.observerActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.observerActions button,.observerActions label{border:1px solid #171717;background:#171717;color:white;padding:12px 15px;font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;cursor:pointer}.observerActions .secondary{background:transparent;color:#171717}.observerActions input{display:none}.observerStatus{margin-top:15px;padding-top:15px;border-top:1px solid #c9c6bd;font:700 13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.observerResult{margin-top:20px;border-left:4px solid #171717;padding:4px 0 4px 14px}.observerResult.risk{border-color:#b9382d}.observerResult.good{border-color:#2e7444}.observerResult strong{display:block;font-size:28px;letter-spacing:-.04em}.observerResult small{display:block;margin-top:6px;color:#666;font:600 12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}.observerNote{margin-top:28px;font-size:12px;line-height:1.5;color:#6b6963}.hidden{display:none!important}
+</style>
+</head>
+<body class="observerBody">
+<main class="observerShell">
+<header class="observerHead"><div><div class="observerBrand">BACKROW</div><div class="observerKicker" id="deckName">AUDIENCE OBSERVER</div></div><button class="ghost compact" id="langBtn">ID</button></header>
+<section>
+<p class="observerKicker" id="kicker">REMOTE AUDIENCE CAPTURE</p>
+<h1 class="observerTitle" id="title">Stand where the audience sits.</h1>
+<p class="observerText" id="intro">Keep the entire projected screen inside the frame. Send a capture and the presenter workstation will match it to the source deck automatically.</p>
+</section>
+<section id="joinPanel" class="observerPanel hidden">
+  <div class="observerKicker" id="joinKicker">PAIR WITH PRESENTER</div>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;margin-top:10px">
+    <input id="joinCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000" style="width:100%;border:1px solid #171717;background:#fff;padding:14px 16px;font:800 28px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em"/>
+    <button id="joinBtn">PAIR</button>
+  </div>
+  <div class="observerStatus" id="joinStatus">Enter the 6-digit code shown on the presenter workstation.</div>
+</section>
+<section id="capturePanel" class="observerPanel hidden">
+<div class="observerViewport">
+<video id="video" class="observerVideo hidden" autoplay playsinline muted></video>
+<img id="photoPreview" class="observerVideo hidden" alt="Audience capture preview"/>
+<div id="emptyFrame" class="observerVideo" style="display:grid;place-items:center;color:#999;font:700 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;text-align:center;padding:24px">FULL PROJECTED SCREEN<br/>SHOULD FILL THIS FRAME</div>
+<div class="frameGuide" aria-hidden="true"><span>PROJECTED SCREEN</span></div>
+</div>
+<canvas id="canvas" class="hidden"></canvas>
+<div class="observerActions">
+<button id="cameraBtn">OPEN CAMERA</button>
+<button id="sendBtn" class="hidden">SEND CURRENT FRAME</button>
+<button id="liveBtn" class="secondary hidden">START LIVE SCAN</button>
+<label class="secondary" for="photoInput" id="photoLabel">TAKE / CHOOSE PHOTO<input id="photoInput" type="file" accept="image/*" capture="environment"/></label>
+</div>
+<div class="observerStatus" id="status">Connecting to presenter session…</div>
+<div id="result" class="observerResult hidden"><strong id="resultTitle"></strong><small id="resultMeta"></small></div>
+</section>
+<p class="observerNote" id="note">This page does not show the source answer. It only sends the audience-position capture to the paired BACKROW presenter session.</p>
+</main>
+<script src="observer.js"></script>
+</body>
+</html>

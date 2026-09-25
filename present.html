@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BACKROW — Presenter Mode</title>
+  <link rel="stylesheet" href="present.css" />
+</head>
+<body>
+  <main id="stage" class="stage" aria-live="polite">
+    <header class="topbar">
+      <div class="brand"><span class="mark">BR</span><span>BACKROW</span></div>
+      <div class="status"><span id="stepCount">01 / 07</span><span id="voiceStatus">VOICE READY</span></div>
+    </header>
+
+    <section id="introScene" class="scene active scene-room">
+      <div class="copy">
+        <div class="eyebrow">PHYSICAL PRESENTATION PATH</div>
+        <h1 id="introTitle">The audience sees the room, not your source file.</h1>
+        <p id="introBody">BACKROW tests what survives the path from slide → projector → room → audience position.</p>
+      </div>
+      <div class="room3d" aria-label="3D-style auditorium diagram">
+        <div class="roomFloor"></div>
+        <div class="screen"><div class="screenValue">2.5%</div></div>
+        <div class="projector"></div>
+        <div class="beam"></div>
+        <div class="seat s1"></div><div class="seat s2"></div><div class="seat s3"></div>
+        <div class="seat s4"></div><div class="seat s5"></div><div class="seat s6"></div>
+        <div class="phone"><div class="phoneLens"></div><div class="phoneLabel">BACK ROW</div></div>
+        <div class="distanceLine"><span>8.4 m</span></div>
+      </div>
+    </section>
+
+    <section id="evidenceScene" class="scene scene-evidence">
+      <div class="evidenceHeader">
+        <div><div class="eyebrow">EXACT INFORMATION LOSS</div><h2 id="evTitle">The information changed.</h2></div>
+        <div class="riskFlag">AT RISK</div>
+      </div>
+      <div class="compare">
+        <figure><figcaption>SOURCE</figcaption><img src="assets/hero_source_detail.png" alt="Source slide detail"><strong>2.5%</strong></figure>
+        <div class="arrow">→</div>
+        <figure><figcaption>AUDIENCE CAPTURE</figcaption><img src="assets/hero_audience_detail.png" alt="Audience capture detail"><strong class="bad">25%</strong></figure>
+      </div>
+      <div class="evidenceNote" id="evNote">Not a style score. The critical value itself was recovered differently.</div>
+    </section>
+
+    <section id="liveScene" class="scene scene-live">
+      <div class="liveHead"><div><div class="eyebrow">LIVE PRODUCT</div><h2 id="liveTitle">BACKROW finds the slide and localizes the failure.</h2></div><div id="liveState" class="liveState">RUNNING JUDGE CASE</div></div>
+      <iframe id="productFrame" src="/?lang=en" title="BACKROW live product"></iframe>
+    </section>
+
+    <section id="architectureScene" class="scene scene-architecture">
+      <div class="copy wide">
+        <div class="eyebrow">WHAT IS ACTUALLY AI</div>
+        <h2 id="archTitle">One learned component. Several deterministic safeguards.</h2>
+      </div>
+      <div class="stack">
+        <div class="layer ai"><span>CUSTOM AI</span><b>AudienceNet 2.0</b><small>paired source / camera / room features</small></div>
+        <div class="layer pretrained"><span>PRETRAINED AI</span><b>Tesseract 5 LSTM</b><small>exact text and numeric recovery</small></div>
+        <div class="layer classical"><span>CLASSICAL CV</span><b>ORB · RANSAC · homography</b><small>page retrieval and perspective rectification</small></div>
+        <div class="layer hard"><span>HARD EVIDENCE</span><b>numeric contradiction guard</b><small>direct evidence outranks model confidence</small></div>
+      </div>
+    </section>
+
+    <section id="repairScene" class="scene scene-repair">
+      <div class="repairHead"><div><div class="eyebrow">FIX → RESCAN → PROVE</div><h2 id="repairTitle">The result is a repair loop, not a score.</h2></div></div>
+      <div class="repairGrid">
+        <figure><figcaption>BEFORE</figcaption><img src="assets/slide_2_view_risk.png" alt="Before repair"><strong class="bad">2 AT RISK</strong></figure>
+        <div class="arrow">→</div>
+        <figure><figcaption>AFTER</figcaption><img src="assets/slide_2_view_fixed.png" alt="After repair"><strong class="good">0 AT RISK</strong></figure>
+      </div>
+    </section>
+
+
+    <section id="validationScene" class="scene scene-validation">
+      <div class="copy wide">
+        <div class="eyebrow" id="valEyebrow">SCIENTIFIC BOUNDARY</div>
+        <h2 id="valTitle">Camera evidence is not human eyesight.</h2>
+        <p id="valLead">BACKROW separates what is already verified from what still requires real readers in real rooms.</p>
+      </div>
+      <div class="validationGrid">
+        <div class="validationBlock done">
+          <span id="valAFlag">VERIFIED ENGINEERING</span>
+          <b id="valATitle">Physical capture pipeline</b>
+          <small id="valABody">slide retrieval · rectification · exact OCR evidence · numeric guard · fix/rescan</small>
+        </div>
+        <div class="validationArrow">→</div>
+        <div class="validationBlock pending">
+          <span id="valBFlag">LOCKED HUMAN STUDY</span>
+          <b id="valBTitle">Naïve readers, hidden truth</b>
+          <small id="valBBody">frozen order · timed exposure · immutable responses · confidence intervals · kill gates</small>
+        </div>
+        <div class="validationArrow">→</div>
+        <div class="validationBlock claim">
+          <span id="valCFlag">CLAIM DISCIPLINE</span>
+          <b id="valCTitle">No fake human-accuracy number</b>
+          <small id="valCBody">procedural model metrics stay labeled as engineering evidence until physical validation is complete</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="closeScene" class="scene scene-close">
+      <div class="closeInner">
+        <div class="eyebrow">BACKROW</div>
+        <h1 id="closeTitle">Presenter sees the source. Audience sees the room.</h1>
+        <p id="closeBody">BACKROW tests the room.</p>
+        <div class="choose">CHOOSE A SLIDE.</div>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <div class="language">
+        <button id="enBtn" class="lang active">EN</button><button id="idBtn" class="lang">ID</button>
+      </div>
+      <div class="transport">
+        <button id="prevBtn" aria-label="Previous step">←</button>
+        <button id="playBtn" class="play">START PRESENTATION</button>
+        <button id="nextBtn" aria-label="Next step">→</button>
+      </div>
+      <div class="hint">SPACE = play/pause · ← → = step</div>
+    </footer>
+    <div id="caption" class="caption"></div>
+  </main>
+  <script src="present.js"></script>
+</body>
+</html>

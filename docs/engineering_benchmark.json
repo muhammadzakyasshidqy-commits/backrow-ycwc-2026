@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-09-05",
+  "synthetic_engineering_only": true,
+  "projection_cases": [
+    {
+      "slide": 1,
+      "severity": 0.18,
+      "aligned": true,
+      "inliers": 1119,
+      "counts": {
+        "supported": 8,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "latency_s": 3.968
+    },
+    {
+      "slide": 1,
+      "severity": 0.58,
+      "aligned": true,
+      "inliers": 883,
+      "counts": {
+        "supported": 8,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "latency_s": 3.416
+    },
+    {
+      "slide": 2,
+      "severity": 0.18,
+      "aligned": true,
+      "inliers": 1607,
+      "counts": {
+        "supported": 8,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "latency_s": 3.156
+    },
+    {
+      "slide": 2,
+      "severity": 0.58,
+      "aligned": true,
+      "inliers": 1010,
+      "counts": {
+        "supported": 7,
+        "watch": 1,
+        "at_risk": 0
+      },
+      "latency_s": 3.119
+    },
+    {
+      "slide": 3,
+      "severity": 0.18,
+      "aligned": true,
+      "inliers": 1410,
+      "counts": {
+        "supported": 8,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "latency_s": 3.609
+    },
+    {
+      "slide": 3,
+      "severity": 0.58,
+      "aligned": true,
+      "inliers": 1362,
+      "counts": {
+        "supported": 8,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "latency_s": 3.484
+    }
+  ],
+  "wrong_pair_rejections": [
+    {
+      "source": 1,
+      "view": "slide_2_view_risk.png",
+      "rejected": true
+    },
+    {
+      "source": 2,
+      "view": "slide_3_view_glare.png",
+      "rejected": true
+    }
+  ],
+  "judge_demo_numeric_mismatch_detected": true
+}

@@ -1,0 +1,7 @@
+{
+  "cases": 6,
+  "alignment_pass": 6,
+  "wrong_pair_reject": 2,
+  "numeric_demo": true,
+  "median_latency_s": 3.45
+}

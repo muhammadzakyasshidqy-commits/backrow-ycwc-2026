@@ -1,0 +1,100 @@
+{
+  "ok": true,
+  "benchmark_type": "procedural ablation / safety engineering only",
+  "slides": [
+    {
+      "slide": 1,
+      "final_counts": {
+        "supported": 10,
+        "watch": 0,
+        "at_risk": 0
+      },
+      "rule_at_risk": 0,
+      "audiencenet_at_risk": 7,
+      "learned_escalations": 0,
+      "safety_overrides": 7
+    },
+    {
+      "slide": 2,
+      "final_counts": {
+        "supported": 6,
+        "watch": 0,
+        "at_risk": 2
+      },
+      "rule_at_risk": 2,
+      "audiencenet_at_risk": 6,
+      "learned_escalations": 0,
+      "safety_overrides": 4
+    },
+    {
+      "slide": 3,
+      "final_counts": {
+        "supported": 4,
+        "watch": 1,
+        "at_risk": 4
+      },
+      "rule_at_risk": 3,
+      "audiencenet_at_risk": 8,
+      "learned_escalations": 1,
+      "safety_overrides": 3
+    }
+  ],
+  "learned_channel_non_cosmetic": {
+    "pass": true,
+    "count": 1,
+    "examples": [
+      {
+        "slide": 3,
+        "source_text": "LAPTOP ROOM",
+        "camera_text": "LAPTOP",
+        "rule": "watch",
+        "audiencenet": "at_risk",
+        "audiencenet_confidence": 0.992
+      }
+    ]
+  },
+  "direct_evidence_safety_override": {
+    "pass": true,
+    "count": 14,
+    "examples": [
+      {
+        "slide": 1,
+        "source_text": "FIELD TEST / AUDIENCE VIEW",
+        "audiencenet_confidence": 0.968,
+        "final": "supported"
+      },
+      {
+        "slide": 1,
+        "source_text": "01 Mainidea",
+        "audiencenet_confidence": 0.68,
+        "final": "supported"
+      },
+      {
+        "slide": 1,
+        "source_text": "02 Evidence",
+        "audiencenet_confidence": 0.636,
+        "final": "supported"
+      },
+      {
+        "slide": 1,
+        "source_text": "Numbers remain readable from distance.",
+        "audiencenet_confidence": 0.884,
+        "final": "supported"
+      }
+    ]
+  },
+  "numeric_hard_guard": {
+    "pass": true,
+    "examples": [
+      {
+        "slide": 2,
+        "source_text": "Launch only if error rate stays below 2.5%.",
+        "camera_text": "Launch only if error rate stays below 25%",
+        "final": "at_risk",
+        "rule": "at_risk",
+        "audiencenet": "at_risk"
+      }
+    ]
+  },
+  "claim_boundary": "Shows implemented channel interaction on generated fixtures; does not establish human readability or real-projector superiority."
+}

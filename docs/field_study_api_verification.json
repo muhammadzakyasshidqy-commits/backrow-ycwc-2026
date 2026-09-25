@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "study_id_length": 16,
+  "participant_truth_leak": false,
+  "participant_cannot_read_admin_api": true,
+  "raw_study_static_file_blocked": true,
+  "admin_token_required": true,
+  "admin_token_not_exported": true,
+  "participant_submission_immutable": true,
+  "frozen_randomized_order": true,
+  "timed_exposure_protocol": true,
+  "early_response_server_blocked": true,
+  "public_exposure_completion_only": true,
+  "presenter_events_authorized_and_logged": true,
+  "response_roundtrip": true,
+  "tiny_study_training_refused": true,
+  "lan_endpoint": true
+}

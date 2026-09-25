@@ -1,0 +1,7 @@
+{
+  "schema": "backrow-real-deck-match-v1",
+  "frames": [
+    {"frame_id": "example-only-delete-me", "stable": true, "expected_slide": 1, "matched_slide": null}
+  ],
+  "notes": "Record at least 50 stable real-projector frames. expected_slide is human ground truth fixed before reading BACKROW match; null matched_slide represents fail-closed rejection."
+}

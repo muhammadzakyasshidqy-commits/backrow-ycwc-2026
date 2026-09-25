@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "pairing_ui": true,
+  "capture_ui": true,
+  "mobile_overflow": false,
+  "bilingual": true,
+  "pageerrors": [],
+  "framing_guide": true,
+  "stable_scan_logic": true,
+  "screenshots": [
+    "BACKROW_V11_OBSERVER_PAIR.png",
+    "BACKROW_V11_OBSERVER_CAPTURE.png"
+  ]
+}
